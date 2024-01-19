@@ -1,0 +1,11 @@
+# InvoiceFinancingsChargeOverParcel
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**charge_type** | **str** | Tipo de encargo pactuado no contrato. | 
+**charge_additional_info** | **str** | Campo livre para preenchimento das informações adicionais referente ao encargo.  [Restrição] Obrigatório quando chargeType for igual &#x27;OUTROS&#x27;.  | [optional] 
+**charge_amount** | **str** | Valor do pagamento do encargo pago fora da parcela. Expresso em valor monetário com no mínimo 2 casas e no máximo 4 casas decimais. | 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

@@ -1,0 +1,45 @@
+# WellKnown
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**acr_values_supported** | **list[object]** |  | [optional] 
+**authorization_endpoint** | **str** | REQUIRED. URL of the OP&#x27;s OAuth 2.0 Authorization Endpoint | [optional] 
+**claims_parameter_supported** | **bool** | OPTIONAL. Boolean value specifying whether the OP supports use of the claims parameter, with true indicating support. If omitted, the default value is false | [optional] 
+**claims_supported** | **list[object]** | RECOMMENDED. JSON array containing a list of the Claim Names of the Claims that the OpenID Provider MAY be able to supply values for | [optional] 
+**code_challenge_methods_supported** | **list[object]** |  | [optional] 
+**end_session_endpoint** | **str** |  | [optional] 
+**check_session_endpoint** | **str** |  | [optional] 
+**grant_types_supported** | **list[object]** | OPTIONAL. JSON array containing a list of the OAuth 2.0 Grant Type values that this OP supports | [optional] 
+**id_token_signing_alg_values_supported** | **list[object]** | REQUIRED. JSON array containing a list of the JWS signing algorithms (alg values) supported by the OP for the ID Token to encode the Claims in a JWT | [optional] 
+**issuer** | **str** | REQUIRED. URL using the https scheme with no query or fragment component that the OP asserts as its Issuer Identifier | [optional] 
+**jwks_uri** | **str** | REQUIRED. URL of the OP&#x27;s JSON Web Key Set [JWK] document. | [optional] 
+**registration_endpoint** | **str** | RECOMMENDED. URL of the OP&#x27;s Dynamic Client Registration Endpoint | [optional] 
+**request_object_signing_alg_values_supported** | **str** | OPTIONAL. JSON array containing a list of the JWS signing algorithms (alg values) supported by the OP for Request Objects | [optional] 
+**request_parameter_supported** | **bool** | OPTIONAL. Boolean value specifying whether the OP supports use of the request parameter, with true indicating support. If omitted, the default value is false | [optional] 
+**request_uri_parameter_supported** | **bool** | OPTIONAL. Boolean value specifying whether the OP supports use of the request_uri parameter, with true indicating support. If omitted, the default value is true | [optional] 
+**require_request_uri_registration** | **bool** | OPTIONAL. Boolean value specifying whether the OP requires any request_uri values used to be pre-registered using the request_uris registration parameter | [optional] 
+**pushed_authorization_request_endpoint** | **list[object]** |  | [optional] 
+**response_modes_supported** | **list[object]** | OPTIONAL. JSON array containing a list of the OAuth 2.0 response_mode values that this OP supports | [optional] 
+**response_types_supported** | **list[object]** | REQUIRED. JSON array containing a list of the OAuth 2.0 response_type values that this OP supports | [optional] 
+**scopes_supported** | **list[object]** | RECOMMENDED. JSON array containing a list of the OAuth 2.0 [RFC6749] scope values that this server supports | [optional] 
+**subject_types_supported** | **list[object]** | REQUIRED. JSON array containing a list of the Subject Identifier types that this OP supports | [optional] 
+**token_endpoint_auth_methods_supported** | **list[object]** | OPTIONAL. JSON array containing a list of Client Authentication methods supported by this Token Endpoint | [optional] 
+**token_endpoint_auth_signing_alg_values_supported** | **list[object]** | OPTIONAL. JSON array containing a list of the JWS signing algorithms (alg values) supported by the Token Endpoint for the signature on the JWT | [optional] 
+**token_endpoint** | **str** | URL of the OP&#x27;s OAuth 2.0 Token Endpoint | [optional] 
+**userinfo_endpoint** | **str** | RECOMMENDED. URL of the OP&#x27;s UserInfo Endpoint | [optional] 
+**userinfo_signing_alg_values_supported** | **list[object]** | OPTIONAL. JSON array containing a list of the JWS signing algorithms (alg values) [JWA] supported by the UserInfo Endpoint to encode the Claims in a JWT | [optional] 
+**authorization_signing_alg_values_supported** | **list[object]** |  | [optional] 
+**introspection_endpoint** | **str** |  | [optional] 
+**introspection_endpoint_auth_methods_supported** | **list[object]** |  | [optional] 
+**introspection_endpoint_auth_signing_alg_values_supported** | **list[object]** |  | [optional] 
+**revocation_endpoint** | **str** |  | [optional] 
+**revocation_endpoint_auth_methods_supported** | **list[object]** |  | [optional] 
+**revocation_endpoint_auth_signing_alg_values_supported** | **list[object]** |  | [optional] 
+**frontchannel_logout_supported** | **bool** |  | [optional] 
+**frontchannel_logout_session_supported** | **bool** |  | [optional] 
+**tls_client_certificate_bound_access_tokens** | **bool** |  | [optional] 
+**claim_types_supported** | **list[object]** | OPTIONAL. JSON array containing a list of the Claim Types that the OpenID Provider supports | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

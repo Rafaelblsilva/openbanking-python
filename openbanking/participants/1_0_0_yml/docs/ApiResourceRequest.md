@@ -1,0 +1,10 @@
+# ApiResourceRequest
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**api_family_type** | [**ApiFamilyType**](ApiFamilyType.md) |  | [optional] 
+**api_version** | **float** | The version number of the API | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

@@ -1,0 +1,12 @@
+# Participant
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**brand** | **str** | Nome da marca reportada pelo participante do Open Finance. O conceito a que se refere a &#x27;marca&#x27; é em essência uma promessa da empresa em fornecer uma série específica de atributos, benefícios e serviços uniformes aos clientes. | 
+**name** | **str** | Nome do participante do Open Finance. | 
+**cnpj_number** | **str** | O CNPJ corresponde ao número de inscrição no Cadastro de Pessoa Jurídica. Deve-se ter apenas os números do CNPJ, sem máscara. | 
+**url_complementary_list** | **str** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

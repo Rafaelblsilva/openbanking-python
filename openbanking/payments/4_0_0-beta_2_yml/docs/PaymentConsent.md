@@ -1,0 +1,15 @@
+# PaymentConsent
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**type** | [**EnumPaymentType**](EnumPaymentType.md) |  | 
+**schedule** | **OneOfPaymentConsentSchedule** | [Restrição] Mutuamente excludente com o campo date.   Este campo é obrigatório no caso de agendamento.   Neste caso, o campo date não deve ser informado.  | [optional] 
+**_date** | **date** | [Restrição] Mutuamente excludente com o objeto schedule.   Este campo é obrigatório no caso de pagamento único.   Neste caso, o objeto schedule não deve ser informado.  | [optional] 
+**currency** | **str** | Código da moeda nacional segundo modelo ISO-4217, ou seja, &#x27;BRL&#x27;. Todos os valores monetários informados estão representados com a moeda vigente do Brasil.  | 
+**amount** | **str** | Valor da transação com 2 casas decimais.  | 
+**ibge_town_code** | **str** | O campo ibgetowncode no arranjo PIX, tem o mesmo comportamento que o campo codMun descrito no item 1.6.6 do manual do PIX, conforme segue:  1. Caso a informação referente ao município não seja enviada; o PSP do recebedor assumirá que não existem feriados estaduais e municipais no período em questão;  | [optional] 
+**details** | [**Details**](Details.md) |  | 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

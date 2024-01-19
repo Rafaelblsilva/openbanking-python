@@ -1,0 +1,80 @@
+# treasure-titles_1_0_0-rc1_0_yml.TransactionsCurrentApi
+
+All URIs are relative to *https://api.banco.com.br/open-banking/treasure-titles/v1*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**treasure_titles_get_investments_investment_id_transactions_current**](TransactionsCurrentApi.md#treasure_titles_get_investments_investment_id_transactions_current) | **GET** /investments/{investmentId}/transactions-current | Obtém as movimentações recentes da operação de Títulos do Tesouro Direto identificada por investmentId. O período a ser considerado para apresentação de movimentações será de até 7 dias - 7 dias anteriores da consulta, incluindo o dia da consulta (D-6).
+
+# **treasure_titles_get_investments_investment_id_transactions_current**
+> ResponseTreasureTitlesProductTransactions treasure_titles_get_investments_investment_id_transactions_current(investment_id, authorization, x_fapi_interaction_id, x_fapi_auth_date=x_fapi_auth_date, x_fapi_customer_ip_address=x_fapi_customer_ip_address, x_customer_user_agent=x_customer_user_agent, page=page, page_size=page_size, pagination_key=pagination_key, from_transaction_date=from_transaction_date, to_transaction_date=to_transaction_date)
+
+Obtém as movimentações recentes da operação de Títulos do Tesouro Direto identificada por investmentId. O período a ser considerado para apresentação de movimentações será de até 7 dias - 7 dias anteriores da consulta, incluindo o dia da consulta (D-6).
+
+Obtém as movimentações recentes da operação de Títulos do Tesouro Direto identificada por investmentId. O período a ser considerado para apresentação de movimentações será de até 7 dias - 7 dias anteriores da consulta, incluindo o dia da consulta (D-6).
+
+### Example
+```python
+from __future__ import print_function
+import time
+import treasure-titles_1_0_0-rc1_0_yml
+from treasure-titles_1_0_0-rc1_0_yml.rest import ApiException
+from pprint import pprint
+
+# Configure OAuth2 access token for authorization: OAuth2AuthorizationCode
+configuration = treasure-titles_1_0_0-rc1_0_yml.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = treasure-titles_1_0_0-rc1_0_yml.TransactionsCurrentApi(treasure-titles_1_0_0-rc1_0_yml.ApiClient(configuration))
+investment_id = 'investment_id_example' # str | Identifica de forma única  o relacionamento do cliente com o produto, mantendo as regras de imutabilidade dentro da instituição transmissora.
+authorization = 'authorization_example' # str | Cabeçalho HTTP padrão. Permite que as credenciais sejam fornecidas dependendo do tipo de recurso solicitado
+x_fapi_interaction_id = 'x_fapi_interaction_id_example' # str | Um UUID RFC4122 usado como um ID de correlação entre request e response. Campo de geração e envio obrigatório pela receptora (client) e o seu valor deve ser \"espelhado\" pela transmissora (server) no cabeçalho de resposta.
+x_fapi_auth_date = 'x_fapi_auth_date_example' # str | Data em que o usuário logou pela última vez com o receptor. Representada de acordo com a [RFC7231](https://tools.ietf.org/html/rfc7231).Exemplo: Sun, 10 Sep 2017 19:43:31 UTC (optional)
+x_fapi_customer_ip_address = 'x_fapi_customer_ip_address_example' # str | O endereço IP do usuário se estiver atualmente logado com o receptor. (optional)
+x_customer_user_agent = 'x_customer_user_agent_example' # str | Indica o user-agent que o usuário utiliza. (optional)
+page = 1 # int | Número da página que está sendo requisitada (o valor da primeira página é 1). (optional) (default to 1)
+page_size = 25 # int | Quantidade total de registros por páginas. (optional) (default to 25)
+pagination_key = 'pagination_key_example' # str | Identificador de rechamada, utilizado para evitar a contagem de chamadas ao endpoint durante a paginação. (optional)
+from_transaction_date = '2013-10-20' # date | Data inicial de filtragem. O período máximo utilizado no filtro é de 7 dias inclusive (D-6).  [Restrição] Deve obrigatoriamente ser enviado caso o campo toTransactionDate seja informado. Caso não seja informado, deve ser assumido o dia atual.  (optional)
+to_transaction_date = '2013-10-20' # date | Data final de filtragem. O período máximo utilizado no filtro é de 7 dias inclusive (D-6).  [Restrição] Deve obrigatoriamente ser enviado caso o campo fromTransactionDate seja informado. Caso não seja informado, deve ser assumido o dia atual.  (optional)
+
+try:
+    # Obtém as movimentações recentes da operação de Títulos do Tesouro Direto identificada por investmentId. O período a ser considerado para apresentação de movimentações será de até 7 dias - 7 dias anteriores da consulta, incluindo o dia da consulta (D-6).
+    api_response = api_instance.treasure_titles_get_investments_investment_id_transactions_current(investment_id, authorization, x_fapi_interaction_id, x_fapi_auth_date=x_fapi_auth_date, x_fapi_customer_ip_address=x_fapi_customer_ip_address, x_customer_user_agent=x_customer_user_agent, page=page, page_size=page_size, pagination_key=pagination_key, from_transaction_date=from_transaction_date, to_transaction_date=to_transaction_date)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling TransactionsCurrentApi->treasure_titles_get_investments_investment_id_transactions_current: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **investment_id** | **str**| Identifica de forma única  o relacionamento do cliente com o produto, mantendo as regras de imutabilidade dentro da instituição transmissora. | 
+ **authorization** | **str**| Cabeçalho HTTP padrão. Permite que as credenciais sejam fornecidas dependendo do tipo de recurso solicitado | 
+ **x_fapi_interaction_id** | **str**| Um UUID RFC4122 usado como um ID de correlação entre request e response. Campo de geração e envio obrigatório pela receptora (client) e o seu valor deve ser \&quot;espelhado\&quot; pela transmissora (server) no cabeçalho de resposta. | 
+ **x_fapi_auth_date** | **str**| Data em que o usuário logou pela última vez com o receptor. Representada de acordo com a [RFC7231](https://tools.ietf.org/html/rfc7231).Exemplo: Sun, 10 Sep 2017 19:43:31 UTC | [optional] 
+ **x_fapi_customer_ip_address** | **str**| O endereço IP do usuário se estiver atualmente logado com o receptor. | [optional] 
+ **x_customer_user_agent** | **str**| Indica o user-agent que o usuário utiliza. | [optional] 
+ **page** | **int**| Número da página que está sendo requisitada (o valor da primeira página é 1). | [optional] [default to 1]
+ **page_size** | **int**| Quantidade total de registros por páginas. | [optional] [default to 25]
+ **pagination_key** | **str**| Identificador de rechamada, utilizado para evitar a contagem de chamadas ao endpoint durante a paginação. | [optional] 
+ **from_transaction_date** | **date**| Data inicial de filtragem. O período máximo utilizado no filtro é de 7 dias inclusive (D-6).  [Restrição] Deve obrigatoriamente ser enviado caso o campo toTransactionDate seja informado. Caso não seja informado, deve ser assumido o dia atual.  | [optional] 
+ **to_transaction_date** | **date**| Data final de filtragem. O período máximo utilizado no filtro é de 7 dias inclusive (D-6).  [Restrição] Deve obrigatoriamente ser enviado caso o campo fromTransactionDate seja informado. Caso não seja informado, deve ser assumido o dia atual.  | [optional] 
+
+### Return type
+
+[**ResponseTreasureTitlesProductTransactions**](ResponseTreasureTitlesProductTransactions.md)
+
+### Authorization
+
+[OAuth2AuthorizationCode](../README.md#OAuth2AuthorizationCode)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, application/json; charset=utf-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+

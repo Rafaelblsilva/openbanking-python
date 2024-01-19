@@ -1,0 +1,16 @@
+# CreatePixPaymentData
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**local_instrument** | [**EnumLocalInstrument**](EnumLocalInstrument.md) |  | 
+**payment** | [**PaymentPix**](PaymentPix.md) |  | 
+**creditor_account** | [**CreditorAccount**](CreditorAccount.md) |  | 
+**remittance_information** | **str** | Deve ser preenchido sempre que o usuário pagador inserir alguma informação adicional em um pagamento, a ser enviada ao recebedor.  | [optional] 
+**qr_code** | **str** | Obs: Campo reservado para uso futuro. Sequência de caracteres que corresponde ao QR Code disponibilizado para o pagador. É a sequência de caracteres que seria lida pelo leitor de QR Code, e deve propiciar o retorno dos dados do pagador após consulta na DICT. Essa funcionalidade é possível tanto para QR Code estático quanto para QR Code dinâmico. No arranjo do Pix esta é a mesma sequência gerada e/ou lida pela funcionalidade Pix Copia e Cola. Este campo deverá ser no formato UTF-8. [Restrição] Preenchimento obrigatório para pagamentos por QR Code, observado o tamanho máximo de 512 bytes.  | [optional] 
+**proxy** | **str** | Chave cadastrada no DICT pertencente ao recebedor. Os tipos de chaves podem ser: telefone, e-mail, cpf/cnpj ou chave aleatória. No caso de telefone celular deve ser informado no padrão E.1641. Para e-mail deve ter o formato xxxxxxxx@xxxxxxx.xxx(.xx) e no máximo 77 caracteres. No caso de CPF deverá ser informado com 11 números, sem pontos ou traços. Para o caso de CNPJ deverá ser informado com 14 números, sem pontos ou traços. No caso de chave aleatória deve ser informado o UUID gerado pelo DICT, conforme formato especificado na RFC41223. Se informado, a detentora da conta deve validar o proxy no DICT quando localInstrument for igual a DICT, QRDN (uso futuro) ou QRES (uso futuro) e validar o campo creditorAccount. Esta validação é opcional caso o localInstrument for igual a INIC. [Restrição] Se localInstrument for igual a MANU, o campo proxy não deve ser preenchido. Se localInstrument for igual INIC, DICT, QRDN (uso futuro) ou QRES (uso futuro), o campo proxy deve ser sempre preenchido com a chave Pix.  | [optional] 
+**cnpj_initiator** | **str** | CNPJ do Iniciador de Pagamento devidamente habilitado para a prestação de Serviço de Iniciação no Pix. | 
+**transaction_identification** | **object** | Trata-se de um identificador de transação que deve ser retransmitido intacto pelo PSP do pagador ao gerar a ordem de pagamento. Essa informação permitirá ao recebedor identificar e correlacionar a transferência, quando recebida, com a apresentação das instruções ao pagador. Os caracteres permitidos no contexto do Pix para o campo txid (EMV 62-05) são: - Letras minúsculas, de ‘a’ a ‘z’ - Letras maiúsculas, de ‘A’ a ‘z’ - Dígitos decimais, de ‘0’ a ‘9’  [Restrição] Se localInstrument for igual a INIC, o campo transactionIdentification deve ser preenchido obrigatoriamente. Se localInstrument for igual a MANU ou DICT, o campo transactionIdentification não deve ser preenchido. A detentora de conta deve validar se a condicionalidade do campo foi atendida pela iniciadora de pagamento.  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
